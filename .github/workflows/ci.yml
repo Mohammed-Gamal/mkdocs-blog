@@ -1,60 +1,53 @@
-name: Deploy MkDocs Site
+name: Deploy MkDocs site to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # default branch
-
-permissions:
-  contents: write
+      - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Check out the repository
-    - name: Check out repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    # Step 2: Configure Git user
-    - name: Configure Git user
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
 
-    # Step 3: Set up Python
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.x'
-    
-    # Step 4: Cache Python dependencies
-    - name: Cache Python dependencies
-      uses: actions/cache@v4
-      with:
-        path: ~/.cache/pip
-        key: mkdocs-material-${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
-        restore-keys: |
-          mkdocs-material-${{ runner.os }}-pip-
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
 
-    # Step 5: Install dependencies
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
+      - name: Build MkDocs site
+        run: |
+          mkdocs build
 
-    # Step 6: Build the site
-    - name: Build MkDocs site
-      run: mkdocs build
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
 
-    # Step 7: Deploy to GitHub Pages
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./site
 
-    # Step 8: Notify the user with the deployment URL
-    - name: Notify deployment URL
-      run: |
-        echo "Deployed to https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    needs: build
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
