@@ -13,15 +13,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Configure Git Credentials
-    - name: Configure Git Credentials
+    # Step 1: Check out the repository
+    - name: Check out repository
       uses: actions/checkout@v4
 
     # Step 2: Configure Git user
     - name: Configure Git user
       run: |
-        git config user.name github-actions[bot]
-        git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
     # Step 3: Set up Python
     - name: Set up Python
@@ -29,7 +29,7 @@ jobs:
       with:
         python-version: '3.x'
     
-    # Step 4: Cache dependencies
+    # Step 4: Cache Python dependencies
     - name: Cache Python dependencies
       uses: actions/cache@v4
       with:
@@ -54,11 +54,7 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: site
 
-    # Step 8: Set output
-    - name: Set output
-      id: deployment
-      run: echo "::set-output name=page_url::https://$GITHUB_REPOSITORY.github.io/$GITHUB_RUN_ID"
-
-    # Step 9: Notify
-    - name: Notify
-      run: echo "Deployed to ${{ steps.deployment.outputs.page_url }}"
+    # Step 8: Notify the user with the deployment URL
+    - name: Notify deployment URL
+      run: |
+        echo "Deployed to https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
