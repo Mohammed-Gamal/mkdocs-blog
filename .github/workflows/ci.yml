@@ -27,6 +27,7 @@ jobs:
         pip install mkdocs-blogging-plugin
         pip install mkdocs-material-extensions
         pip install mkdocs-glightbox
+        pip install mkdocs-rss-plugin
 
     # Step 4: Build the site
     - name: Build MkDocs site
