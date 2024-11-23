@@ -110,6 +110,14 @@ rf = RandomForestClassifier(random_state=42)
 rf.fit(X_train, y_train)
 ```
 
+## Math behind the Random Forest Classifier
+
+\[ \cos x=\sum_{k=0}^{\infty}\frac{(-1)^k}{(2k)!}x^{2k} \]
+
+The homomorphism $f$ is injective if and only if its kernel is only the
+singleton set $e_G$, because otherwise $\exists a,b\in G$ with $a\neq b$ such
+that $f(a)=f(b)$.
+
 ## Evaluate the model
 Next, we need to evaluate the model on the validation set. We will use the 'accuracy_score' function from the 'sklearn.metrics' module to calculate the accuracy of the model.
 

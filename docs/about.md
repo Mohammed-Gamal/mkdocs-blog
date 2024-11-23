@@ -6,25 +6,27 @@ hide:
 ---
 
 <style>
-.highlight-box {
-    padding: 1rem;
-    border-left: 4px solid #00796b;
+.highlight-box,
+.info {
+    padding: 0.3rem 0rem 0.3rem 1rem;
+    
     border-radius: 6px;
     margin-bottom: 1rem;
-    font-style: italic;
+}
+
+.highlight-box {
+  border-left: 4px solid #00796b;
+  font-style: italic;
+}
+
+.info {
+  border-left: 4px solid #d81b60;
 }
 
 .icon {
     font-size: 1.5rem;
     margin-right: 0.5rem;
     color: #00796b;
-}
-
-.info {
-    padding: 1rem;
-    border-left: 4px solid #d81b60;
-    border-radius: 6px;
-    margin-bottom: 1rem;
 }
 
 .list-style {
@@ -68,7 +70,7 @@ My journey began with a strong foundation in computer science during childhood, 
 
 ## 🔍 Research Interests
 
-I am deeply intrigued by **Artificial Intelligence** and **Machine Learning**, with specific interests in:  
+I am deeply passionate about the field of **Artificial Intelligence** and **Machine Learning**, with specific interests in:  
 
 - 🧠 **Natural Language Processing (NLP)**  
 - 👁️‍🗨️ **Computer Vision (CV)**  
@@ -80,7 +82,8 @@ I believe in the transformative power of AI to revolutionize industries and impr
 ## 📇 Personal Information
 
 <div class="info" markdown>
-**Full Name:** Mohamed Gamal Elfadel  
+**Full Name:** Mohamed G. Elfadel
+**Nickname:** MG/Jimmy
 **Country:** 🇪🇬 Egypt  
 **Phone:** (+20) 011 5113 2047
 **Email:** [1Mohamed.Gamal54@gmail.com](mailto:1Mohamed.Gamal54@gmail.com)  
@@ -91,16 +94,31 @@ I believe in the transformative power of AI to revolutionize industries and impr
 
 ## 🌐 Social Profiles
 
-- 🐙 **GitHub:** [Mohammed-Gamal](https://github.com/Mohammed-Gamal)  
-- 🔗 **LinkedIn:** [mohamed-gamal-74192b1a7](https://www.linkedin.com/in/mohamed-gamal-74192b1a7/)  
-- 🎮 **Discord:** `#grand02`  
+- <i class="fab fa-github" style="margin-right: 5px;"></i> **GitHub:** [Mohammed-Gamal](https://github.com/Mohammed-Gamal)  
+
+- <i class="fab fa-linkedin" style="margin-right: 5px;"></i> **LinkedIn:** [mohamed-gamal-74192b1a7](https://www.linkedin.com/in/mohamed-gamal-74192b1a7/)  
+
+- <i class="fab fa-discord" style="margin-right: 5px;"></i> **Discord:** `#grand02`  
 
 ---
 
 ## 💼 Professional Experience
 
-- **2024–Present:** Demonstrator, Faculty of Computers and Informatics, **Suez Canal University**, Ismailia, Egypt.  
-- **2023–Present:** ITI External Instructor, **Information Technology Institute (ITI)**, Ismail Branch, Egypt.  
+<div class="highlight-box" markdown>
+**2024–Present:** Demonstrator, Faculty of Computers and Informatics, **Suez Canal University**, Ismailia, Egypt.
+
+**2023–Present:** ITI External Instructor, **Information Technology Institute (ITI)**, Ismail Branch, Egypt.
+</div>
+
+---
+
+## 📚 Education
+
+<div class="highlight-box" markdown>
+**2023–2024:** Pre-Master Degree in Advanced Computer Science, **Faculty of Computers and Informatics**, **Suez Canal University**, Ismailia, Egypt.
+
+**2019–2023:** BSc. in Computer Science, **Faculty of Computers and Informatics**, **Suez Canal University**, Ismailia, Egypt.
+</div>
 
 ---
 

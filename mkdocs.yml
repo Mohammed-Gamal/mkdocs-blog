@@ -106,6 +106,10 @@ extra_css:
   - stylesheets/extra.css
   - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css
 
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
 markdown_extensions:
   - attr_list
   - md_in_html
@@ -115,6 +119,7 @@ markdown_extensions:
   - tables
   - footnotes
   - admonition
+  
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tabbed:
@@ -132,5 +137,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
 
 copyright: "Copyright &copy; 2025 Mohamed Gamal | BitsNBytes"
