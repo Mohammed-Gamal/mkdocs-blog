@@ -16,11 +16,14 @@ jobs:
     # Step 1: Configure Git Credentials
     - name: Configure Git Credentials
       uses: actions/checkout@v4
+
+    # Step 2: Configure Git user
+    - name: Configure Git user
       run: |
         git config user.name github-actions[bot]
         git config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
-    # Step 2: Set up Python
+    # Step 3: Set up Python
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
@@ -29,28 +32,24 @@ jobs:
     - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV # Cache busting
     
     # Step 3: Cache dependencies
-    - name: Cache dependencies
+    - name: Cache Python dependencies
       uses: actions/cache@v4
       with:
-        key: mkdocs-material-${{ env.cache_id }}
-        path: .cache
+        path: ~/.cache/pip
+        key: mkdocs-material-${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
         restore-keys: |
-          mkdocs-material-
+          mkdocs-material-${{ runner.os }}-pip-
 
-    # Step 4: Install dependencies
+    # Step 5: Install dependencies
     - name: Install dependencies
       run: |
-        pip install mkdocs-material
-        pip install mkdocs-blogging-plugin
-        pip install mkdocs-material-extensions
-        pip install mkdocs-glightbox
-        pip install mkdocs-rss-plugin
+        pip install -r requirements.txt
 
-    # Step 4: Build the site
+    # Step 6: Build the site
     - name: Build MkDocs site
       run: mkdocs build
 
-    # Step 5: Deploy to GitHub Pages
+    # Step 7: Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
