@@ -1,3 +1,72 @@
+---
+hide:
+  - navigation
+  - toc
+  - footer
+---
+
+<style>
+body {
+    background: url('assets/home-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header,
+.md-tabs {
+    background-color: hsla(174, 100%, 29%, 0.422) !important;
+}
+
+.md-header__source {
+    display: none;
+}
+
+.hero {
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    text-align: center;
+}
+
+.hero p {
+    color: #e2e4e98f;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.hero p.home-quote {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.hero .button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    border: 1px solid #009485;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hero .button:hover {
+    background-color: #009485;
+    color: white !important;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.home-grid {
+    grid-gap: 2.4rem !important;
+}
+
+.home-grid li {
+    background: rgba(0, 0, 0, 0.5);
+}
+</style>
+
 <div class="hero">
     <h1>💡 Welcome to my website!</h1>
     <p>Your one-stop destination for tutorials, blogs, and resources.</p>
@@ -7,22 +76,18 @@
     <a href="/mysite/coding/python" class="button primary">Explore Posts</a>
 </div>
 
-<div class="grid cards" markdown>
+<div class="grid cards home-grid" markdown>
 
--   :material-format-font:{ .lg .middle } __Made to measure__
-
-    ---
-
-    Change the colors, fonts, language, icons, logo and more with a few lines
-
-    [:octicons-arrow-right-24: Customization](#)
-
--   :material-scale-balance:{ .lg .middle } __Open Source, MIT__
+-   :material-clock-fast:{ .lg .middle } __Motivation__
 
     ---
 
-    Material for MkDocs is licensed under MIT and available on [GitHub]
+    As a Software Engineer and AI Specialist, I strive to bring technology to life, making it easier and more productive for everyone. My passion lies in crafting innovative solutions with well-designed architectures, ensuring high scalability and easy maintenance.
 
-    [:octicons-arrow-right-24: License](#)
+-   :material-scale-balance:{ .lg .middle } __MIT License__
+
+    ---
+
+    BitsNBytes is open-source built with material mkdocs and hosted on GitHub pages licensed under the MIT License, feel free to use it exclusively for your personal projects.
 
 </div>
