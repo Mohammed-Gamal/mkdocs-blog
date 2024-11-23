@@ -3,24 +3,40 @@ name: Deploy MkDocs Site
 on:
   push:
     branches:
-      - main  # Change 'main' to your default branch name if different
+      - main  # default branch
+
+permissions:
+  contents: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the repository
-    - name: Checkout code
-      uses: actions/checkout@v3
+    # Step 1: Configure Git Credentials
+    - name: Configure Git Credentials
+      uses: actions/checkout@v4
+      run: |
+        git config user.name github-actions[bot]
+        git config user.email 41898282+github-actions[bot]@users.noreply.github.com
 
     # Step 2: Set up Python
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.10'  # Use a supported version for MkDocs
+        python-version: '3.x'
+      run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV # Cache busting
+    
+    # Step 3: Cache dependencies
+    - name: Cache dependencies
+    - uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
 
-    # Step 3: Install dependencies
+    # Step 4: Install dependencies
     - name: Install dependencies
       run: |
         pip install mkdocs-material
