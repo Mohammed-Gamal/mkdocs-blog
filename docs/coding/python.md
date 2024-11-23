@@ -32,12 +32,34 @@ To get started with Python, you need to have Python installed on your system. Yo
 
 Let's write a simple Python program that prints "Hello, World!" to the console. Open a text editor and create a new file called `hello.py`. Add the following code to the file:
 
-```python title="main.py" linenums="1"
-# Print "Hello, World!" to the console
-print("Hello, World!")
-```
+=== "Python"
+
+    ``` python title="main.py" linenums="1"
+      # Print "Hello, World!" to the console
+      print("Hello, World!") 
+    ```
+
+=== "C++"
+
+    ``` c++ title="main.cpp" linenums="1"
+      #include <iostream>
+
+      int main(void) {
+        std::cout << "Hello world!" << std::endl;
+        return 0;
+      }
+    ```
 
 Save the file and run it using the Python interpreter. You should see the output "Hello, World!" printed to the console.
+
+???+ tip "Trick in Python"
+
+    ``` python title="main.py" linenums="1"
+      # Print "Hello, World!" to the console
+      text = "Hello, World!"
+      print(text) 
+    ```
+    For more information you can check the official Mkdocs documentation at [Mkdocs Docs](https://squidfunk.github.io/mkdocs-material/reference/admonitions/).
 
 ## Variables and Data Types
 

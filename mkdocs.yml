@@ -15,6 +15,7 @@ nav:
 theme:
   logo: assets/logo2.png
   favicon: assets/favicon.ico
+  custom_dir: overrides
   name: material
   language: en
   direction: ltr
@@ -96,6 +97,11 @@ extra_css:
 markdown_extensions:
   - attr_list
   - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - toc:
       permalink: ¶
   - pymdownx.blocks.caption
@@ -109,5 +115,6 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
-copyright: Copyright &copy; 2024 - 2025 Mohamed Gamal
+copyright: "Copyright &copy; 2024-2025 Mohamed Gamal | BitsNBytes"
+
         
