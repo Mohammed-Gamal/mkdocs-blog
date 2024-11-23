@@ -1,0 +1,110 @@
+site_name: MG Space
+docs_dir: docs
+site_url: https://mydomain.org/mysite
+repo_url: https://github.com/Mohammed-Gamal/machine-learning
+repo_name: MG/machine-learning
+nav:
+  - Home: index.md
+  - About: about.md
+  - Code Docs:
+    - 'Intro to Python': coding/python.md
+    - 'Random Forest (RF) Classifier': coding/random-forest.md
+  - Blog:
+    - 'Blog': blog/index.md
+  - Tags: tags.md
+theme:
+  logo: assets/logo2.png
+  favicon: assets/favicon.ico
+  name: material
+  language: en
+  direction: ltr
+  font:
+    text: "Roboto"
+    code: "JetBrains Mono"
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - header.autohide
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - toc.follow
+    #- toc.integrate
+    - search.share
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+plugins:
+  - search
+  - tags:
+      tags_file: tags.md
+  - glightbox
+  - blog:
+      post_dir: "{blog}/posts"
+      authors_file: "{blog}/.authors.yml"
+      pagination: true
+  - rss:
+      match_path: "blog/posts/.*"
+      date_from_meta:
+        as_creation: date.created
+        as_update: date.updated
+extra:
+  consent:
+      title: Cookie consent
+      description: >- 
+        We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.
+  social:
+    - icon: material/github
+      link: https://github.com/Mohammed-Gamal
+    - icon: material/twitter
+      link: https://x.com/MohamedGam22544
+    - icon: material/linkedin
+      link: https://www.linkedin.com/in/mohamed-gamal-74192b1a7/
+    - icon: material/youtube
+      link: https://www.youtube.com/@BitsNBytes_
+    - icon: material/email-outline
+      link: mailto:<1Mohamed.Gamal54@gmail.com>
+extra_css:
+  - stylesheets/extra.css
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: ¶
+  - pymdownx.blocks.caption
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+copyright: Copyright &copy; 2024 - 2025 Mohamed Gamal
+        
