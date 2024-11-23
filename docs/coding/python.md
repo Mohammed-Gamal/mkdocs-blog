@@ -73,7 +73,16 @@ name = "Alice"
 is_student = True
 ```
 
-You can perform arithmetic operations, string manipulation, and other operations on variables of different data types in Python.
+| Data Type | Description | Example |
+| --- | --- | --- |
+| int | Integer | `10` |
+| float | Floating-point number | `3.14` |
+| str | String | `"Alice"` |
+| bool | Boolean | `True` |
+
+You can use variables[^1] to store data, perform calculations[^2], and manipulate strings in Python.
+[^1]: Variables are used to store data in memory and can be assigned different values during the execution of a program.
+[^2]: Calculations are performed via the CPU, specifically the ALU (Arithmetic Logic Unit), which is responsible for performing arithmetic and logical operations.
 
 ## Control Structures
 
@@ -93,6 +102,12 @@ for i in range(5):
 ```
 
 You can use control structures to make your Python programs more dynamic and interactive.
+
+???+ Success "Tasks to Try"
+    - [x] **Task 1:** Create a Python program that checks if a number is even or odd.
+    - [x] **Task 2:** Implement a Python function that calculates the factorial of a number.
+    - [x] **Task 3:** Write a Python program that generates a Fibonacci sequence.
+    - [x] **Task 4:** Create a Python program that sorts a list of numbers in ascending order.
 
 ## Conclusion
 

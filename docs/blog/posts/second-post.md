@@ -54,7 +54,10 @@ print(torch.__version__)
 ### Sub-section 1
 How to code a certain one lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem.
 
-![Image title](https://dummyimage.com/600x400/eee/aaa){ align=left }
+![Image title](https://dummyimage.com/600x400/eee/aaa)
+/// caption
+Image caption goes here
+///
 
 ### Sub-section 2
 How to code a certain one lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem.

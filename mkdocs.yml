@@ -59,6 +59,7 @@ theme:
     - content.code.copy
     - content.code.select
     - content.code.annotate
+    - content.footnote.tooltips
 plugins:
   - search
   - tags:
@@ -97,6 +98,11 @@ extra_css:
 markdown_extensions:
   - attr_list
   - md_in_html
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - footnotes
   - admonition
   - pymdownx.details
   - pymdownx.superfences
