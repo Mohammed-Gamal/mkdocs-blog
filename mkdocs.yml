@@ -92,6 +92,7 @@ hooks:
   - hooks/socialmedia.py
 extra_css:
   - stylesheets/extra.css
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css
 markdown_extensions:
   - attr_list
   - md_in_html
