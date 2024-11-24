@@ -98,6 +98,8 @@ I believe in the transformative power of AI to revolutionize industries and impr
 
 - <i class="fab fa-linkedin" style="margin-right: 5px;"></i> **LinkedIn:** [mohamed-gamal-74192b1a7](https://www.linkedin.com/in/mohamed-gamal-74192b1a7/)  
 
+- <i class="fab fa-slideshare" style="margin-right: 5px;"></i> **SlideShare:** [Mohamed-Gamal](https://www.slideshare.net/1mohamedgamal54)
+
 - <i class="fab fa-discord" style="margin-right: 5px;"></i> **Discord:** `#grand02`  
 
 ---
